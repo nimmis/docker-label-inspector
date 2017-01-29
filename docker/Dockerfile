@@ -5,6 +5,8 @@ LABEL maintainer="nimmis <kjell.havneskold@gmail.com>" \
       org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.name="docker label inspector in a container" \
       org.label-schema.url="https://www.nimmis.nu" \
+      org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url="https://github.com/nimmis/docker-label-inspector.git"
 
 COPY /root/* /
