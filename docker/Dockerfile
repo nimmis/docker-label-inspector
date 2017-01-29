@@ -4,7 +4,7 @@ ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL maintainer="nimmis <kjell.havneskold@gmail.com>" \
-      org.label-schema.schema-version="build #10" \
+      org.label-schema.schema-version="build #11" \
       org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.name="docker label inspector in a container" \
       org.label-schema.url="https://www.nimmis.nu" \
