@@ -81,6 +81,13 @@ On instance:
      u'vendor': u'ACME Incorporated'}
 ```
 
+## Label Schema
+
+The community is trying to create a common schema for docker, one is|[Label Schema](http://label-schema.org/), the have a [Release Candidate 1](http://label-schema.org/rc1/) that you can download it here [schema.json](https://raw.githubusercontent.com/nimmis/docker-label-inspector/master/example/schema.json)
+
+Download the file to the directory where you have the **Dockerfile** and use **dli validate** to check against it.
+
+This is 
 
 ## Installation
 

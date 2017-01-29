@@ -2,6 +2,94 @@
   "title": "Dockerfile schema",
   "type": "object",
   "properties": {
+    "org.label-schema.build-date": {
+      "description": "build date",
+      "type": "string"
+    },
+    "org.label-schema.name": {
+      "description": "Human friendly name for the image",
+      "type": "string"
+    },
+    "org.label-schema.description": {
+      "description": "image description",
+      "type": "string"
+    },
+    "org.label-schema.usage": {
+      "description": "link to usage description",
+      "type": "string"
+    },
+    "org.label-schema.url": {
+      "description": "URL to more information",
+      "type": "string"
+    },
+    "org.label-schema.vcs-url": {
+      "description": "URL to vcs",
+      "type": "string"
+    },
+    "org.label-schema.vcs-ref": {
+      "description": "vcs version",
+      "type": "string"
+    },
+    "org.label-schema.vendor": {
+      "description": "Organization name",
+      "type": "string"
+    },
+    "org.label-schema.version": {
+      "description": "release version in vcs",
+      "type": "string"
+    },
+    "org.label-schema.schema-version": {
+      "description": "Version, should be included",
+      "type": "string"
+    },
+    "org.label-schema.docker.cmd": {
+      "description": "how to start the container",
+      "type": "string"
+    },
+    "org.label-schema.docker.cmd.devel": {
+      "description": "how to start the container in developer mode",
+      "type": "string"
+    },
+    "org.label-schema.docker.cmd.test": {
+      "description": "how to test the container",
+      "type": "string"
+    },
+    "org.label-schema.docker.cmd.help": {
+      "description": "command to get help from container",
+      "type": "string"
+    },
+    "org.label-schema.docker.params": {
+      "description": "environment variables for the Docker runtime",
+      "type": "string"
+    },
+    "org.label-schema.rkt.cmd": {
+      "description": "How to run a container based on the image under the rkt runtime",
+      "type": "string"
+    },
+    "org.label-schema.rkt.cmd.devel": {
+      "description": "org.label-schema.rkt.cmd.devel under the rkt runtime",
+      "type": "string"
+    },
+    "org.label-schema.rkt.cmd.test": {
+      "description": "How to run the bundled test-suite for the image under the rkt runtime",
+      "type": "string"
+    },
+    "org.label-schema.rkt.debug": {
+      "description": "How to get an appropriate interactive shell for debugging on the container under rkt",
+      "type": "string"
+    },
+    "org.label-schema.rkt.cmd.help": {
+      "description": "How to output help from the image under the rkt runtime",
+      "type": "string"
+    },
+    "org.label-schema.rkt.params": {
+      "description": "Applicable environment variables for the rkt runtime",
+      "type": "string"
+    },
+    "maintainer": {
+      "description": "container maintainer",
+      "type": "string"
+    },
     "com.example.release-date": {
       "type": "string"
     },
@@ -14,5 +102,5 @@
       "minimum": 0
     }
   },
-  "required": ["com.example.is-beta", "com.example.version"]
+  "required": ["maintainer", "org.label-schema.schema-version"]
 }
