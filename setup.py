@@ -12,6 +12,7 @@ setup(
         'jsonschema',
         'colorama',
         'dockerfile-parse',
+        'singleton'
     ],
     entry_points='''
         [console_scripts]
