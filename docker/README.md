@@ -1,5 +1,7 @@
 # Docker Label inspector
 
+[![](https://images.microbadger.com/badges/image/nimmis/label-inspector.svg)](https://microbadger.com/images/nimmis/label-inspector "Get your own image badge on microbadger.com")
+
 Docker Label Inspector is a tool to help ensure you're providing your
 Docker images with the metadata they will need and that it has the correct syntax.
 
