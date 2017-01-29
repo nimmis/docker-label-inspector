@@ -1,5 +1,9 @@
 FROM alpine
 
+MAINTAINER nimmis <kjell.havneskold@gmail.com>
+
+ARG IMAGE_NAME
+ARG DOCKER_REPO
 ARG BUILD_DATE
 ARG VCS_REF
 
@@ -18,7 +22,7 @@ RUN apk update && apk upgrade && \
 
     # Make info file about this build
     mkdir -p /etc/BUILDS && \
-    printf "Build of nimmis/label-inspector, date: %s\n"  `date -u +"%Y-%m-%dT%H:%M:%SZ"` >> /etc/BUILDS/label-inspector && \
+    printf "Build of %s, date: %s\n" $(echo $IMAGE_NAME | sed 's#^.*io/##')  `date -u +"%Y-%m-%dT%H:%M:%SZ"` > /etc/BUILDS/$(echo $DOCKER_REPO | awk -F '/' '{print $NF}') && \
 
     apk add python py2-pip && \
     # create /dli directory
