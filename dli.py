@@ -58,7 +58,10 @@ class DockerfileLabelLint(DockerfileLabelParser):
         self.logger.info('Check all labels have namespaces')
         for key in self.labels.keys():
             if key.count('.') < 2:
-                self.logger.warn("Label '%s' should use a namespace based on reverse DNS notation" % key)
+                # ignore maintainer label, is the replacement for MAINTAINER that's depricated
+                # se https://docs.docker.com/engine/reference/builder/
+                if not key == 'maintainer': 
+                    self.logger.warn("Label '%s' should use a namespace based on reverse DNS notation" % key)
 
     def reserved_namespaces(self):
         self.logger.info("Check labels don't use reserved namespaces")
